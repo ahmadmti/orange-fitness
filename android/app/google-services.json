@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "35980791376",
+    "firebase_url": "https://orangefitness-d0093-default-rtdb.firebaseio.com",
+    "project_id": "orangefitness-d0093",
+    "storage_bucket": "orangefitness-d0093.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35980791376:android:d507e911ad46040ec6cb55",
+        "android_client_info": {
+          "package_name": "com.OrangeFitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35980791376-ug5d3bv0jeucofg0ghroq0l5r67hualm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpbnCo9VFSU2Jpow1YDRLHWJhECPA84Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35980791376-ug5d3bv0jeucofg0ghroq0l5r67hualm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35980791376:android:63888755459c513fc6cb55",
+        "android_client_info": {
+          "package_name": "com.orangefitness.orange_fitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35980791376-ug5d3bv0jeucofg0ghroq0l5r67hualm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpbnCo9VFSU2Jpow1YDRLHWJhECPA84Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35980791376-ug5d3bv0jeucofg0ghroq0l5r67hualm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
