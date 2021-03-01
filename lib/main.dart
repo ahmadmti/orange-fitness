@@ -5,12 +5,11 @@ import 'package:orange_fitness/screens/Views_workoutEquip/Add_Equipment.dart';
 import 'package:orange_fitness/screens/welcomepage.dart';
 import 'package:orange_fitness/ui/search/search_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'injection_container.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   initKiwi();
   runApp(MyApp());
 }

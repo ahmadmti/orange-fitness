@@ -12,6 +12,8 @@ class Add_Equipments extends StatefulWidget {
 }
 
 class _Add_EquipmentsState extends State<Add_Equipments> {
+    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   String title, description;
   File selectedImage;
   bool _isloading = false;
@@ -35,7 +37,15 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
       UploadTask uploadTask = ref.putFile(selectedImage);
       uploadTask.then((res) {
         res.ref.getDownloadURL();
-        print('this is url $res');
+        print('this is url ${res.ref.getDownloadURL()}');
+        setState(() {
+          _isloading = false;
+        });
+
+        scaffoldKey.currentState.showSnackBar(SnackBar(
+          content: Text("Uploadeding successful!"),
+          duration: Duration(seconds: 2),
+        ));
       });
     } else {}
   }
@@ -48,6 +58,7 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       key: scaffoldKey,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -71,7 +82,7 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
               //     appId: "1:35980791376:android:63888755459c513fc6cb55",
               //     apiKey: "AIzaSyBpbnCo9VFSU2Jpow1YDRLHWJhECPA84Hw");
               // Firebase.initializeApp().whenComplete(() {
-                // print("completed");
+              // print("completed");
               uploadEquipment();
               // });
             },
