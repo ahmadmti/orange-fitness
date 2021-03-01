@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:orange_fitness/screens/services/crud.dart';
@@ -40,6 +41,11 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
   }
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -60,7 +66,14 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
         actions: <Widget>[
           GestureDetector(
             onTap: () {
+              // var op = FirebaseOptions(
+              //     projectId: "orangefitness-d0093",
+              //     appId: "1:35980791376:android:63888755459c513fc6cb55",
+              //     apiKey: "AIzaSyBpbnCo9VFSU2Jpow1YDRLHWJhECPA84Hw");
+              // Firebase.initializeApp().whenComplete(() {
+                // print("completed");
               uploadEquipment();
+              // });
             },
             child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16),

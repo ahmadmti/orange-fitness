@@ -15,8 +15,7 @@ class SearchBar extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 5),
-        child: Container()
-        // SearchField(),
+        child: SearchField(),
       ),
     );
   }

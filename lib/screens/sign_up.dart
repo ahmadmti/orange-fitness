@@ -26,9 +26,9 @@ class SignUP extends StatelessWidget {
               Container(
                 height: height * 0.12,
                 width: width * 0.5,
-                child: Image.asset(
-                  "images/org.png",
-                ),
+                // child: Image.asset(
+                //   "images/org.png",
+                // ),
               ),
               Container(
                 child: Column(

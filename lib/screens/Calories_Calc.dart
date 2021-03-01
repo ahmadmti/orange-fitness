@@ -25,8 +25,8 @@ class _CaloriesCalculatorState extends State<Calories_Calc> {
           title: Text(
             'Calories Calculator.',
             style: TextStyle(
-              color: Colors.orangeAccent.shade50,
-            ),
+                // color: Colors.orangeAccent.shade50,
+                ),
           ),
           elevation: 0.0,
           backgroundColor: Colors.deepOrangeAccent.shade100,
@@ -137,11 +137,18 @@ class _CaloriesCalculatorState extends State<Calories_Calc> {
                           age = double.parse(agecontroller.value.text);
                         });
 
-                        Calculate_Fcalories(
-                          height,
-                          weight,
-                          age,
-                        );
+                        if (currentindex == 0)
+                          Calculate_Mcalories(
+                            height,
+                            weight,
+                            age,
+                          );
+                        else
+                          Calculate_Fcalories(
+                            height,
+                            weight,
+                            age,
+                          );
                       },
                       color: Colors.deepOrangeAccent.shade100,
                       child: Text(

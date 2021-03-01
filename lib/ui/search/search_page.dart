@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiwi/kiwi.dart' as kiwi;
+// import 'package:kiwi/kiwi.dart' as kiwi;
 import 'package:kiwi/kiwi.dart';
 import 'package:orange_fitness/data/model/search/model_search.dart';
 import 'package:orange_fitness/ui/detail/detail_page.dart';
@@ -11,14 +11,20 @@ import 'package:orange_fitness/ui/search/widget/search_bar.dart';
 
 class SearchPage extends StatefulWidget {
   _SearchPageState createState() => _SearchPageState();
-}  
+}
+
+KiwiContainer container = KiwiContainer();
 
 class _SearchPageState extends State<SearchPage> {
-  // container.registerFactory((c) => ServiceB(c.resolve<ServiceA>()));
-// container.registerInstance(Sith('Anakin', 'Skywalker'));
-
-  final _searchBloc = kiwi.Container().resolve<SearchBloc>();
+  final _searchBloc = container.resolve<SearchBloc>();
   final _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    // container.registerInstance(SearchBloc(null));
+    // container.registerFactory((c) => SearchBloc(c.resolve()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +101,7 @@ class _SearchPageState extends State<SearchPage> {
   bool _handleScrollNotification(ScrollNotification notification) {
     if (notification is ScrollEndNotification &&
         _scrollController.position.extentAfter == 0) {
-      _searchBloc.fetchNextResultPage();
+      container.resolve<SearchBloc>().fetchNextResultPage();
     }
     return false;
   }

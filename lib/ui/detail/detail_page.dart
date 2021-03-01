@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kiwi/kiwi.dart' as kiwi;
+import 'package:kiwi/kiwi.dart';
+// import 'package:kiwi/kiwi.dart' as kiwi;
 import 'package:orange_fitness/data/model/detail/video_snippet.dart';
 import 'package:orange_fitness/ui/detail/detail.dart';
 import 'package:orange_fitness/ui/search/widget/centered_message.dart';
@@ -17,12 +18,16 @@ class DetailPage extends StatefulWidget {
   @override
   _DetailPageState createState() => _DetailPageState();
 }
+KiwiContainer container = KiwiContainer();
+
 class _DetailPageState extends State<DetailPage> {
-  final _detailBloc = kiwi.Container().resolve<DetailBloc>();
+final _detailBloc = container.resolve<DetailBloc>();
 
   @override
   void initState() {
     super.initState();
+        container.registerInstance(DetailBloc(null));
+
     _detailBloc.onShowDetail(id: widget.videoId);
   }
 

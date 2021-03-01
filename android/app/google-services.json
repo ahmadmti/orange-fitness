@@ -44,6 +44,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "35980791376-ml09vt6pbo7cqcha93lf2685gafb2i7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orangefitness.orange_fitness",
+            "certificate_hash": "40bed85975b82fb612dec002367c1a31a99ac466"
+          }
+        },
+        {
           "client_id": "35980791376-ug5d3bv0jeucofg0ghroq0l5r67hualm.apps.googleusercontent.com",
           "client_type": 3
         }
