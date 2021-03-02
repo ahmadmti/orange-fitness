@@ -6,13 +6,15 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:async';
 import 'dart:io';
 
+import 'Workout_Equipments.dart';
+
 class Add_Equipments extends StatefulWidget {
   @override
   _Add_EquipmentsState createState() => _Add_EquipmentsState();
 }
 
 class _Add_EquipmentsState extends State<Add_Equipments> {
-    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   String title, description;
   File selectedImage;
@@ -46,6 +48,11 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
           content: Text("Uploadeding successful!"),
           duration: Duration(seconds: 2),
         ));
+
+        Timer(Duration(seconds: 2), () {
+          Navigator.push(
+        context, MaterialPageRoute(builder: (context) => Equipments_page()));
+        });
       });
     } else {}
   }
@@ -58,7 +65,7 @@ class _Add_EquipmentsState extends State<Add_Equipments> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       key: scaffoldKey,
+      key: scaffoldKey,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
